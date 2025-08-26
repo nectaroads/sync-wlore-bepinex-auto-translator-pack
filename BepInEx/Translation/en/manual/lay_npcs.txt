@@ -1,4 +1,0 @@
-大嬸 = Aunt
-艾力略 = Elliot
-阿丹 = Adam
-果農 = Fruit Grower

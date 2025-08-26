@@ -1,6 +1,0 @@
-克蘭村 = Kelan Village
-新手海灘 = Starter Beach
-星之方舟主控室 = Star Ark Control Room
-往樹精之森 = North Island's Woods
-威靈村 = Welling Village
-艾烏的家 = Civillian's House

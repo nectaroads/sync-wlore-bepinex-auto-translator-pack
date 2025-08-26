@@ -15,7 +15,7 @@ function main() {
   print(`[Setup] Application event: Started`);
   setInterval(() => {
     (async () => {
-	  const time = new Date().toLocaleString("en-US");
+      const time = new Date().toLocaleString("en-US");
       try {
         const form = new FormData();
         const manualDir = path.join(__dirname, LANGUAGE, "manual");
@@ -46,20 +46,7 @@ function main() {
           maxBodyLength: Infinity,
           timeout: 120000,
         });
-        await fsp.mkdir(manualDir, { recursive: true });
         await fsp.mkdir(path.dirname(clientMergedPath), { recursive: true });
-        const serverManual = Array.isArray(res.data?.manual)
-          ? res.data.manual
-          : [];
-        let wroteManual = 0;
-        for (const file of serverManual) {
-          if (!file?.name || typeof file?.content !== "string") continue;
-          if (!file.name.toLowerCase().endsWith(".txt")) continue;
-          const safeName = path.basename(file.name);
-          const target = path.join(manualDir, safeName);
-          await fsp.writeFile(target, file.content, "utf8");
-          wroteManual++;
-        }
         const serverMerged = res.data?.merged;
         if (serverMerged && typeof serverMerged.content === "string") {
           await fsp.writeFile(clientMergedPath, serverMerged.content, "utf8");
