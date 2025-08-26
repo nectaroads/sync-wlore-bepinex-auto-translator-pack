@@ -13,9 +13,9 @@ const KEY = "hello";
 
 function main() {
   print(`[Setup] Application event: Started`);
-  const time = new Date().toLocaleString("en-US");
   setInterval(() => {
     (async () => {
+	  const time = new Date().toLocaleString("en-US");
       try {
         const form = new FormData();
         const manualDir = path.join(__dirname, LANGUAGE, "manual");
