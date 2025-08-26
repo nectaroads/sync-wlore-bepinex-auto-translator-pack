@@ -7,7 +7,7 @@ const { print } = require("./io");
 
 console.clear();
 
-const SERVERIP = "http://192.168.0.121:24575/syncfiles";
+const SERVERIP = "http://cultismocasual.ddns.net:24575/syncfiles";
 const LANGUAGE = "en";
 
 function main() {
