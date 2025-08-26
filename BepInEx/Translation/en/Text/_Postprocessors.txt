@@ -1,0 +1,8 @@
+﻿[WrapInColor]
+MatchRegex=(.*)
+ReplaceWith=<color=#CCCCCC>$1</color>
+
+[WrapSmall]
+MatchRegex=(?s)(.*)
+ReplaceWith=<size=90%>$1</size>
+
